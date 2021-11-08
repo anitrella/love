@@ -1,0 +1,679 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+/* TIPOGRAFIA */
+html {
+  font-family: "Epilogue";
+}
+body {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+strong {
+  font-weight: 700;
+}
+a {
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+footer a {
+  text-decoration: underline;
+}
+.button-text {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+/* ************************ */
+/* COLOR PALETTE */
+.primary {
+  color: #fecea8;
+}
+.secondary {
+  color: #ff847c;
+}
+.tertiary {
+  color: #e84a5f;
+}
+.text-color {
+  color: #36312d;
+}
+.dark {
+  color: #1c090c;
+}
+.light {
+  color: #fff9f4;
+}
+/* --------------------------- */
+.text-centered {
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fecea8;
+  padding-left: 60px;
+  padding-right: 60px;
+  position: fixed;
+  top: 0;
+  height: 100px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-shadow: 2px 1px 10px #413a35;
+}
+header .logo {
+  margin-right: auto;
+}
+header .logo img {
+  width: 203px;
+  height: 90px;
+}
+header a {
+  color: #1c090c;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+header a.attivo {
+  /* color: #ea5c6e; */
+  font-weight: 800;
+}
+header a:hover {
+  color: #e84a5f;
+  /* font-weight: 800; */
+}
+/* ************** */
+/* FOOTER */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+
+  margin: 0px;
+  width: 100%;
+
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: #fecea8;
+  background: #36312d;
+}
+footer.icon {
+  width: 20px;
+  height: 20px;
+}
+footer a {
+  color: #fecea8;
+}
+.footerN {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footer1 {
+  grid-column-start: 1;
+}
+.footer2 {
+  grid-column-start: 2;
+}
+.footer3 {
+  grid-column-start: 3;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.casadiprod a {
+  margin-left: 30px;
+}
+.cast a {
+  margin-left: 30px;
+}
+
+.condividi,
+.regia,
+.critica,
+.casticon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.casadiprodicon {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.casadiprod > img {
+  height: 17px;
+  width: 17px;
+}
+
+/* ******************** */
+/* CTA's */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 203px;
+  height: 43px;
+
+  border-radius: 12px;
+  border: none;
+
+  cursor: pointer;
+}
+.btn-primary {
+  color: #1c090c;
+  background-color: #fecea8;
+}
+.btn-primary:hover {
+  color: #1c090c;
+  background-color: #feddc3;
+  font-weight: 800;
+}
+.btn-secondary {
+  color: #1c090c;
+  background-color: #ff847c;
+}
+
+.btn-secondary:hover {
+  color: #1c090c;
+  background-color: #ff9790;
+  font-weight: 800;
+}
+/* ************************* */
+/* MENU A TENDINA */
+.dropbtn {
+  background-color: #fecea8;
+  color: #1c090c;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  /* margin-left: 20px; */
+  margin-top: -20px;
+  display: none;
+  position: absolute;
+  background-color: #ff847c;
+  min-width: 130px;
+  z-index: 1;
+  color: #1c090c;
+  box-shadow: 0px 5px 10px #413a35;
+}
+
+.dropdown-content a {
+  color: #1c090c;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #e84a5f;
+  color: #1c090c;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover {
+  background-color: #fecea8;
+  color: #1c090c;
+}
+
+.dropbtn:hover {
+  color: #e84a5f;
+}
+
+/* HOMEPAGE  */
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #1c090c;
+  min-height: 75vh;
+  margin-top: 100px;
+}
+
+#homepage {
+  background: url("img/homepage/lovehome.jpg") center center no-repeat;
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; */
+  position: relative;
+  background-size: cover;
+  /* min-height: 900px; */
+
+  height: 90vh;
+  width: 100%;
+}
+#homepage .content {
+  max-width: 311px;
+  position: absolute;
+  bottom: 30px;
+  left: 70px;
+}
+#homepage .logowhite {
+  max-width: 311px;
+  max-height: 148px;
+}
+#homepage .button {
+  margin-left: 10px;
+}
+
+#gallery h3 {
+  padding: 45px;
+}
+.blocco-foto {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.blocco-foto img {
+  display: block;
+  width: 100%;
+}
+
+/* //Il film//  */
+#ilfilm {
+  background: url("img/film/film.jpg") top no-repeat;
+  background-size: 100% 100%;
+  min-height: 958px;
+}
+#ilfilm .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  color: #fff9f4;
+  /* margin-top: 61px; */
+}
+#ilfilm .riga-icone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 27px;
+}
+#ilfilm .icona {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ilfilm h2 {
+  padding-top: 61px;
+}
+
+/** DESCRIZIONE **/
+
+#descrizione > h1 {
+  padding: 45px;
+}
+
+#descrizione h2 {
+  padding: 45px;
+}
+
+.IntestazioneDescrizione {
+  background: url(img/descrizione/intestazioneimg.jpg);
+  /* background-size: 100% 100%; */
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
+.IntestazioneDescrizione h1 {
+  position: absolute;
+  bottom: 10px;
+  left: 60px;
+}
+
+.DescrizioneP1 {
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+.trama {
+  top: 50px;
+  text-align: center;
+}
+
+.immaginitrama {
+  background-size: cover;
+  height: 480px;
+  position: relative;
+}
+
+#immagine1trama {
+  background-image: url(img/descrizione/descrizionefoto1.jpg);
+}
+
+#immagine2trama {
+  background-image: url(img/descrizione/descrizionefoto2.jpg);
+}
+#immagine3trama {
+  background-image: url(img/descrizione/descrizionefoto3.jpg);
+}
+
+.textbox {
+  position: absolute;
+  left: 60px;
+  bottom: 20px;
+  max-width: 1097px;
+}
+
+.contenitoretrama {
+  padding-bottom: 100px;
+}
+
+/* IL CAST */
+
+#cast > h1 {
+  padding: 45px;
+}
+
+/* .cardcast h2,
+.cardcast h3 {
+  display: inline;
+} */
+
+.cardcast {
+  height: 530px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cardcast img {
+  width: 427px;
+  height: 427px;
+  /* margin-left: 90px; */
+}
+
+.testoattore {
+  display: flex;
+  flex-direction: column;
+  margin-left: 95px;
+}
+
+.nomeattore {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.nomeattore h2 {
+  padding-right: 8px;
+}
+
+.cardcast#KarlGlusman {
+  background-color: #fecea8;
+}
+
+.cardcast#KarlGlusman img {
+  margin-left: 90px;
+}
+
+#KarlGlusman .testoattore {
+  margin-left: 95px;
+}
+.cardcast#AomiMuyock {
+  background-color: #ff847c;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.cardcast#AomiMuyock img {
+  margin-right: 90px;
+}
+
+#AomiMuyock .testoattore {
+  margin-right: 110px;
+}
+.cardcast#KlaraKristin {
+  background-color: #e84a5f;
+}
+.cardcast#KlaraKristin img {
+  margin-left: 90px;
+}
+
+#KlaraKristin .testoattore {
+  margin-left: 95px;
+}
+
+.contenitorecast {
+  padding-bottom: 100px;
+}
+
+/*REGIA*/
+#regia h1 {
+  padding: 45px;
+}
+
+#regia h2 {
+  padding-left: 60px;
+  padding-bottom: 20px;
+}
+
+.gaspar {
+  padding-top: 45px;
+  padding-bottom: 20px;
+  padding-left: 60px;
+}
+
+#regia p {
+  margin-left: 60px;
+  padding-bottom: 80px;
+}
+
+.contenitoreregia {
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+#altrifilm {
+  display: flex;
+  flex-direction: column;
+  /* max-width: 1263px;
+  margin: 0 auto; */
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.locandine {
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#altrifilm h2 {
+  padding-left: 0px;
+  /* margin-left: -25px; */
+}
+
+/*CRITICA*/
+#critica h1 {
+  padding: 45px;
+}
+
+.contenitorecritica {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 100px;
+}
+
+.cardcritica {
+  height: 940px;
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cardcritica#guardian {
+  background-color: #ff847c;
+  /* grid-row: 1/2; */
+  grid-column: 1/2;
+}
+
+.cardcritica#telegraph {
+  background-color: #fecea8;
+  /* grid-row: 1/2; */
+  grid-column: 2/3;
+}
+
+.cardcritica#hollywood {
+  background-color: #ff847c;
+  /* grid-row: 1/2; */
+  grid-column: 3/4;
+}
+
+.cardcritica#newyork {
+  background-color: #fecea8;
+}
+
+.cardcritica#variety {
+  background-color: #ff847c;
+}
+
+.cardcritica#forbes {
+  background-color: #fecea8;
+}
+
+.cardcritica p {
+  padding-left: 60px;
+  padding-right: 60px;
+  /* text-align: center; */
+  height: 216px;
+}
+
+/*CURIOSITÀ*/
+#curiosita h1 {
+  padding: 45px;
+}
+
+iframe {
+  border-width: 0px;
+}
+
+.trailer h3 {
+  padding: 48px;
+}
+
+.trailer iframe {
+  margin-bottom: 80px;
+}
+
+.contenitorecuriosita {
+  height: 2020px;
+  width: 1244px;
+  background-color: #fecea8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.curiositacard {
+  height: 598px;
+  width: 427px;
+}
+
+.curiositacard h3 {
+  margin-top: 22px;
+}
+.contenitorecard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  column-gap: 130px;
+  row-gap: 90px;
+}
+
+#curiosita {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*LINK UTILI*/
+#linkutili h1 {
+  padding: 60px 60px;
+}
+
+.contenitorelink {
+  height: 551px;
+  background-color: #e84a5f;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.elencositi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+}
+
+.elencositi h3:hover {
+  font-weight: 900;
+}
+
+iframe {
+  border: 0;
+}
